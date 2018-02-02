@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.rebenko.mykitchenideas.MainActivity">
+
+
+    <item
+        android:id="@+id/detail_action_rate"
+        android:icon="@drawable/ic_action_rate"
+        android:title="@string/action_rate"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/detail_share_app"
+        android:icon="@drawable/ic_action_share"
+        android:title="@string/action_share_app"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/detail_more_apps"
+        android:icon="@drawable/ic_more_apps"
+        android:title="@string/more_apps"
+        app:showAsAction="never" />
+
+
+</menu>

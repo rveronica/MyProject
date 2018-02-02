@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">·100 ідей для кухні·</string>
+    <string name="rate_title">Оцінити</string>
+    <string name="rate_message">Якщо вам подобається, будь ласка, поставте оцінку. Дякуємо!</string>
+    <string name="rate_later">ПІЗНІШЕ</string>
+    <string name="rate_never">ДЯКУЮ, НІ</string>
+    <string name="rate_now">ТАК</string>
+</resources>

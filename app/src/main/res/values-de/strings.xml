@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">·100 Kitchen Ideas·</string>
+    <string name="rate_title">Bewerte</string>
+    <string name="rate_message">Wenn dir ··100 Kitchen Ideas· gefällt, würdest Du es bitte bewerten? Dies wird nicht länger als eine Minute dauern. Danke für die Unterstützung!</string>
+    <string name="rate_later">Später erinnern</string>
+    <string name="rate_now">JA</string>
+    <string name="rate_never">NEIN</string>
+</resources>

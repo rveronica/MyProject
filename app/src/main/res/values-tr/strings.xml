@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">·100 Kitchen Ideas·</string>
+    <string name="rate_title">Oy</string>
+    <string name="rate_later">SONRA</string>
+    <string name="rate_message">Eğer ·100 Kitchen Ideas· uygulamamız hoşunuza gittiyse, oy vermek ister misiniz? Bir dakikadan fazla sürmeyecektir. Desteğiniz için teşekkürler!</string>
+    <string name="rate_now">EVET</string>
+    <string name="rate_never">YOK HAYIR</string>
+</resources>

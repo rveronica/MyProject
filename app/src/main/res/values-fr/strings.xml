@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">·100 Kitchen Ideas·</string>
+    <string name="rate_title">Note</string>
+    <string name="rate_message">Si vous aimez utiliser ·100 Kitchen Ideas·, n’oubliez pas de voter sur l’appstore. Cela ne prend qu’une minute. Merci d’avance pour votre soutien!</string>
+    <string name="rate_never">NON</string>
+    <string name="rate_now">OUI</string>
+    <string name="rate_later">PLUS TARD</string>
+</resources>

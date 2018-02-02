@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">·100キッチン収納のアイデア·</string>
+    <string name="rate_title">レビュ</string>
+    <string name="rate_message">の使用を楽しんでいるのなら、少しだけ時間をかけてそれを評価して頂けませんか？1分以上かかりません。ご協力ありがとうございます！</string>
+    <string name="rate_later">後で見る</string>
+    <string name="rate_never">いいえ</string>
+    <string name="rate_now">はい</string>
+</resources>

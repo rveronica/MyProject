@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">··100 Kitchen Ideas·</string>
+    <string name="rate_title">Vurdér</string>
+    <string name="rate_message">Hvis du kan lide at bruge  appen, vil du ikke tage et øjeblik til at vurdere den? Det tager ikke mere end et minut. Tak for din hjælp!</string>
+    <string name="rate_never">Nej tak</string>
+    <string name="rate_now">Vurdér nu</string>
+    <string name="rate_later">Påmind senere</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">·100 Kitchen Ideas·</string>
+    <string name="rate_title">Reseña</string>
+    <string name="rate_message">Si te gusta ·100 Kitchen Ideas·, ¿podrías escribirnos una reseña? No te tomará más de un minuto. ¡Gracias por tu apoyo!</string>
+    <string name="rate_later">Recordarme más tarde</string>
+    <string name="rate_now">SÍ</string>
+    <string name="rate_never">NO</string>
+</resources>

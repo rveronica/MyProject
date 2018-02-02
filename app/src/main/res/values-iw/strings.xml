@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">·100 Kitchen Ideas·</string>
+    <string name="rate_title">דרג את</string>
+    <string name="rate_message">אם אתה נהנה להשתמש ב- ·10 Minute DIY·, אתה מוכן לקחת רגע כדי לדרג את את התוכנה? זה לא ייקח יותר מדקה. תודה על התמיכה!</string>
+    <string name="rate_now">כן</string>
+    <string name="rate_never">לא</string>
+    <string name="rate_later">יותר מאוחר</string>
+</resources>

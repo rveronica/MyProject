@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">·100 Kitchen Ideas·</string>
+    <string name="rate_title">Vota</string>
+    <string name="rate_message">Se ti piace utilizzare ·100 Kitchen Ideas·, ti dispiacerebbe darle un voto? Non ci vorrà più di un minuto. Grazie per il vostro supporto!</string>
+    <string name="rate_later">Ricordamelo dopo</string>
+    <string name="rate_never">NO</string>
+    <string name="rate_now">VOTA</string>
+</resources>

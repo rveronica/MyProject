@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">·100 Kitchen Ideas·</string>
+    <string name="rate_title">Rate </string>
+    <string name="rate_message">If you enjoy using the app, please take a moment to rate the app. Thank you for your support!</string>
+    <string name="rate_now">RATE</string>
+    <string name="rate_later">LATER</string>
+    <string name="rate_never">NO, THANKS</string>
+
+
+    <string name="action_rate" translatable="false">Rate</string>
+    <string name="action_share_app" translatable="false">Share App</string>
+    <string name="more_apps" translatable="false">More Apps</string>
+    <string name="action_cancel" translatable="false">Exit</string>
+
+
+    <string name="tab_1" translatable="false">DISCOVER NEW</string>
+    <string name="tab_2" translatable="false">MY FAVORITE</string>
+
+    <string name="checkInternet" translatable="false">Check your INTERNET CONNECTION</string>
+    <string name="saveToSDcard" translatable="false">Saved to PICTURES directory</string>
+    <string name="saveToFav" translatable="false">Added to Favorite</string>
+    <string name="noMediaMounted" translatable="false">No Media Mounted</string>
+
+    <string name="appPlayMarketUrl" translatable="false">https://play.google.com/store/apps/details?id=com.rebenko.mykitchenideas</string>
+    <string name="devPlayMarketUrl" translatable="false">https://play.google.com/store/apps/developer?id=VeronicaR</string>
+
+    <string name="ad_unit_id" translatable="false">ca-app-pub-9595835527986323/3831015479</string>
+    <string name="ad_ind_unit_id" translatable="false">ca-app-pub-9595835527986323/8712892675</string>
+    <string name="ad_banner_unit_id" translatable="false">ca-app-pub-9595835527986323/8871112573</string>
+
+
+</resources>

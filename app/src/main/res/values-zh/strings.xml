@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">·100 Kitchen Ideas·</string>
+    <string name="rate_title">評分</string>
+    <string name="rate_message">如果您喜歡用 ·100 Kitchen Ideas·，是否願意花一些時間打個分數？其過程將不超過一分鐘。 謝謝您的支持！</string>
+    <string name="rate_never">否</string>
+    <string name="rate_now">是</string>
+    <string name="rate_later">稍後提醒我</string>
+</resources>
