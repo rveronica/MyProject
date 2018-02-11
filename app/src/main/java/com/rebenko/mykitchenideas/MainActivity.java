@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private static InterstitialAd interstitial;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
         language = Locale.getDefault().getDisplayLanguage();
 
         setContentView(R.layout.activity_main);
-
-        MyDatabaseHelper.DBopen(this);
 
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -93,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAdClosed() {requestInterstitial();}
         });
-        MyDatabaseHelper.getDBItems();
     }
 
     private void requestInterstitial() {
@@ -101,11 +99,12 @@ public class MainActivity extends AppCompatActivity {
         interstitial.loadAd(adRequest);
     }
 
-    // loading new data then app created or stopped with Home/Back button
     @Override
-    public void onStart() {
-        super.onStart();
-        MyDatabaseHelper.loadJSON();
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
     }
 
     public static void displayInterstitial() {

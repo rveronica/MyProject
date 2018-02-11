@@ -8,7 +8,6 @@ class MyFacebookItem {
     long date;
     String name;
     String link;
-    String tag;
     String type;
     String source;
     int likes_amount;
@@ -17,7 +16,7 @@ class MyFacebookItem {
 
     MyFacebookItem() {
         this.name = "";
-        this.tag = "";
+        this.source = "";
         this.photo = new ArrayList<>();
     }
 

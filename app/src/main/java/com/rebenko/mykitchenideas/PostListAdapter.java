@@ -35,6 +35,7 @@ class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.ViewHolder> {
         TextView dateView;
         TextView titleView;
         ImageView cardImageView;
+        ImageView videoSign;
         Button favoriteButton;
         ImageButton shareButton;
 
@@ -55,7 +56,7 @@ class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.ViewHolder> {
             }
 
             cardImageView = (ImageView) cardView.findViewById(R.id.cardImageView);
-
+            videoSign = (ImageView) cardView.findViewById(R.id.videoSign);
             favoriteButton = (Button) cardView.findViewById(R.id.favorite_button);
             shareButton = (ImageButton) cardView.findViewById(R.id.share_button);
         }
@@ -84,6 +85,8 @@ class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.ViewHolder> {
         //if (!actualPost.photo.get(0).src.equals(""))
             holder.mImageLoader.get(actualPost.photo.get(0).src, ImageLoader.getImageListener(holder.cardImageView,
                     R.drawable.placeholder, R.drawable.placeholder));
+        if (actualPost.type.equals("video")) holder.videoSign.setVisibility(View.VISIBLE);
+        else holder.videoSign.setVisibility(View.INVISIBLE);
 
 
         holder.favoriteButton.setText(String.valueOf(actualPost.likes_amount));
@@ -95,7 +98,7 @@ class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.ViewHolder> {
         holder.favoriteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDatabaseHelper.updateFavorite(actualPost);
+                MyDatabaseHelper.updateFavorite(actualPost, false);
             }
         });
 

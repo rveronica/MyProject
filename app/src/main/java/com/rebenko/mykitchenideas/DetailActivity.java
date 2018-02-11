@@ -63,9 +63,9 @@ public class DetailActivity extends AppCompatActivity {
                 myPhotos.add(obj);
             actualPost = MyDatabaseHelper.FAVORITE_ITEMS.get(post_position);
         } else {
-            for (Object obj : MyDatabaseHelper.ALL_ITEMS.get(post_position).photo)
+            for (Object obj : MyDatabaseHelper.NEW_ITEMS.get(post_position).photo)
                 myPhotos.add(obj);
-            actualPost = MyDatabaseHelper.ALL_ITEMS.get(post_position);
+            actualPost = MyDatabaseHelper.NEW_ITEMS.get(post_position);
         }
 
         // ads
@@ -99,7 +99,7 @@ public class DetailActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        DetailAdapter adapter = new DetailAdapter(myPhotos, actualPost, includeAds);
+        DetailAdapter adapter = new DetailAdapter(myPhotos, actualPost, includeAds, is_favorite);
         recyclerView.setAdapter(adapter);
     }
 

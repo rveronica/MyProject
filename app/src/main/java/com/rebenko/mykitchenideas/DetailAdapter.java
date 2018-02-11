@@ -34,13 +34,14 @@ class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final List<Object> postPhotos;
     private MyFacebookItem actualPost;
     private Boolean includeAds;
+    private Boolean is_favorite;
 
 
-    DetailAdapter(List<Object> post, MyFacebookItem actualPost, Boolean includeAds) {
+    DetailAdapter(List<Object> post, MyFacebookItem actualPost, Boolean includeAds, Boolean is_favorite) {
         this.postPhotos = post;
         this.actualPost = actualPost;
         this.includeAds = includeAds;
-
+        this.is_favorite = is_favorite;
     }
 
     private class MyViewHolder extends RecyclerView.ViewHolder {
@@ -172,7 +173,7 @@ class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 break;
 
             case ITEM_BOTTOM_TYPE:
-                BottomViewHolder myBottomHolder = (BottomViewHolder) holder;
+                final BottomViewHolder myBottomHolder = (BottomViewHolder) holder;
                 myBottomHolder.bottom_favorite.setBackgroundResource((actualPost.is_favorite == 1) ?
                         R.drawable.ic_favorite_red : R.drawable.ic_favorite_white);
 
@@ -181,7 +182,8 @@ class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     public void onClick(View v) {
                         v.setBackgroundResource((actualPost.is_favorite == 0) ?
                                 R.drawable.ic_favorite_red : R.drawable.ic_favorite_white);
-                        MyDatabaseHelper.updateFavorite(actualPost);
+                        MyDatabaseHelper.updateFavorite(actualPost, is_favorite);
+                        if(is_favorite)myBottomHolder.bottom_favorite.setClickable(false);
                     }
                 });
                 break;

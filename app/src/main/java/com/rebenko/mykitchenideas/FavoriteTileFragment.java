@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 
 
 public class FavoriteTileFragment extends Fragment {
+    private final static int HOURS_UNTIL_REFRESH = 2;
+    //private final static int MINUTES_UNTIL_REFRESH = 2;
+    Long dataLoadedTime = 0L;
+
 
     static FavoriteTileAdapter adapter;
 
@@ -30,5 +34,17 @@ public class FavoriteTileFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         return recyclerView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if(System.currentTimeMillis() >= dataLoadedTime + (HOURS_UNTIL_REFRESH * 60 * 60 * 1000)){
+            dataLoadedTime = System.currentTimeMillis();
+            MyDatabaseHelper.DBopen(getActivity());
+            PostListFragment.adapter.notifyDataSetChanged();
+            FavoriteTileFragment.adapter.notifyDataSetChanged();
+        }
     }
 }

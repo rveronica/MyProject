@@ -27,6 +27,7 @@
     <string name="ad_unit_id" translatable="false">ca-app-pub-9595835527986323/3831015479</string>
     <string name="ad_ind_unit_id" translatable="false">ca-app-pub-9595835527986323/8712892675</string>
     <string name="ad_banner_unit_id" translatable="false">ca-app-pub-9595835527986323/8871112573</string>
+    <string name="ad_banner2_unit_id" translatable="false">ca-app-pub-9595835527986323/1022436668</string>
 
 
 </resources>

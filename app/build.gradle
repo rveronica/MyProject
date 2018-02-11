@@ -8,8 +8,8 @@ android {
         applicationId "com.rebenko.mykitchenideas"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 8
-        versionName "3.2"
+        versionCode 9
+        versionName "3.3"
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mediaView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="true">
+
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="400dp"
+        android:layout_height="400dp" />
+
+    <RelativeLayout
+        android:id="@+id/video_Progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/videoThumb"
+            android:layout_width="match_parent"
+            android:layout_height="0px" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adVideoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/video_footer"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/ad_banner2_unit_id"></com.google.android.gms.ads.AdView>
+
+    <LinearLayout
+        android:id="@+id/video_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/video_button_audio"
+            android:layout_width="@dimen/bottom_button_width"
+            android:layout_height="@dimen/bottom_button_height"
+            android:layout_marginLeft="@dimen/bottom_button_width"
+            android:background="@drawable/ic_volume_unmute"
+            android:padding="5dp"
+            android:paddingBottom="10dp" />
+
+
+        <Button
+            android:id="@+id/video_button_favorite"
+            android:layout_width="@dimen/bottom_button_width"
+            android:layout_height="@dimen/bottom_button_height"
+            android:layout_marginLeft="@dimen/bottom_button_width"
+            android:layout_marginRight="@dimen/bottom_button_width"
+            android:alpha="0.85"
+            android:background="@drawable/ic_favorite_white"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp" />
+
+
+        <Button
+            android:id="@+id/video_button_share"
+            android:layout_width="@dimen/bottom_button_width"
+            android:layout_height="@dimen/bottom_button_height"
+            android:layout_marginRight="@dimen/bottom_button_width"
+            android:background="@drawable/ic_action_share"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -27,7 +27,6 @@ import android.widget.RelativeLayout;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
@@ -49,11 +48,11 @@ public class MyMediaActivity extends AppCompatActivity implements OnPreparedList
         setContentView(R.layout.media);
 
         int post_position = getIntent().getIntExtra(VIDEO_POST_POSITION, 0);
-        boolean is_favorite = getIntent().getBooleanExtra(I_FAVORITE_VIDEO_POST, false);
+        final boolean is_favorite = getIntent().getBooleanExtra(I_FAVORITE_VIDEO_POST, false);
         if (is_favorite) {
             videoPost = MyDatabaseHelper.FAVORITE_ITEMS.get(post_position);
         } else {
-            videoPost = MyDatabaseHelper.ALL_ITEMS.get(post_position);
+            videoPost = MyDatabaseHelper.NEW_ITEMS.get(post_position);
         }
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -117,7 +116,7 @@ public class MyMediaActivity extends AppCompatActivity implements OnPreparedList
                 Intent intentSend = new Intent(Intent.ACTION_SEND);
                 intentSend.setType("text/plain");
                 //intentSend.putExtra(Intent.EXTRA_TEXT, actualPost.link);
-                intentSend.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.rebenko.mykitchenideas");
+                intentSend.putExtra(Intent.EXTRA_TEXT, videoPost.link);
                 v.getContext().startActivity(Intent.createChooser(intentSend, ""));
             }
         });
@@ -127,7 +126,8 @@ public class MyMediaActivity extends AppCompatActivity implements OnPreparedList
             public void onClick(View v) {
                 video_button_favorite.setBackgroundResource((videoPost.is_favorite == 0) ?
                         R.drawable.ic_favorite_red : R.drawable.ic_favorite_white);
-                MyDatabaseHelper.updateFavorite(videoPost);
+                MyDatabaseHelper.updateFavorite(videoPost, is_favorite);
+                if(is_favorite)video_button_favorite.setClickable(false);
             }
         });
 
@@ -141,7 +141,7 @@ public class MyMediaActivity extends AppCompatActivity implements OnPreparedList
             }
         });
 
-        MobileAds.initialize(this, getString(R.string.ad_banner_unit_id));
+        MobileAds.initialize(this, getString(R.string.ad_banner2_unit_id));
         AdView mAdView = (AdView)findViewById(R.id.adVideoView);
         mAdView.loadAd(new AdRequest.Builder().build());
     }
@@ -155,7 +155,7 @@ public class MyMediaActivity extends AppCompatActivity implements OnPreparedList
         controller.setMediaPlayer(this);
         controller.setAnchorView(this.findViewById(R.id.surfaceView));
         controller.setEnabled(true);
-        controller.show(3000);
+       // controller.show(1000);
         mediaPlayer.start();
     }
 

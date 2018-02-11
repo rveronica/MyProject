@@ -64,7 +64,7 @@ class FavoriteTileAdapter extends RecyclerView.Adapter<FavoriteTileAdapter.ViewH
             @Override
             public boolean onLongClick(View v) {
                 int p = holder.getAdapterPosition();
-                MyDatabaseHelper.updateFavorite(posts.get(p));
+                MyDatabaseHelper.updateFavorite(posts.get(p), true);
                 return true;
             }
         });
@@ -75,10 +75,17 @@ class FavoriteTileAdapter extends RecyclerView.Adapter<FavoriteTileAdapter.ViewH
                 MainActivity.displayInterstitial();
 
                 if (favorite_actualPost.type.equals("video")) {
-                    Intent intent = new Intent(holder.myContext, MyMediaActivity.class);
-                    intent.putExtra(MyMediaActivity.VIDEO_POST_POSITION, position);
-                    intent.putExtra(MyMediaActivity.I_FAVORITE_VIDEO_POST, true);
-                    holder.myContext.startActivity(intent);
+                   if(favorite_actualPost.source.equals("")){
+                        Intent intent = new Intent(holder.myContext, MyWebActivity.class);
+                        intent.putExtra(MyWebActivity.VIDEO_POST_POSITION, position);
+                        holder.myContext.startActivity(intent);
+                    }
+                    else {
+                        Intent intent = new Intent(holder.myContext, MyMediaActivity.class);
+                        intent.putExtra(MyMediaActivity.VIDEO_POST_POSITION, position);
+                        intent.putExtra(MyMediaActivity.I_FAVORITE_VIDEO_POST, true);
+                        holder.myContext.startActivity(intent);
+                    }
                 }
                 else {
                     Intent intent = new Intent(holder.myContext, DetailActivity.class);

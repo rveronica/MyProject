@@ -45,9 +45,16 @@
 
         <activity
             android:name=".SaveActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></activity>
-        <activity android:name=".MyMediaActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".MyMediaActivity"
             android:label=""
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rebenko.mykitchenideas.MainActivity" />
+        </activity>
+        <activity android:name=".MyWebActivity">android:label=""
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
